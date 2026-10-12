@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#c7d8fb">
+    <link rel="icon" type="image/png" href="assets/pudding-favicon-large.png">
+    <title>Yaru's Website</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <main class="site-shell" aria-label="Yaru 的个人主页">
+      <header class="site-header">
+        <h1>Yaru's Website</h1>
+        <img class="header-cat" src="assets/angel-cat-header.png" alt="长着白色翅膀的小猫" decoding="async">
+      </header>
+
+      <div class="page-grid">
+        <aside class="side-nav" aria-label="网站导航">
+          <nav>
+            <a href="index.html">回到入口</a>
+            <a href="journal.html">日志</a>
+            <a href="https://www.xiaohongshu.com/user/profile/6949369d0000000037008b4e" target="_blank" rel="noopener noreferrer">小红书</a>
+            <button id="open-construction" type="button">施工中...</button>
+          </nav>
+        </aside>
+
+        <section class="main-panel" aria-label="主页介绍">
+          <img class="nav-cat" src="assets/angel-cat-nav.png" alt="长着翅膀的小猫" decoding="async">
+
+          <section class="music-player" aria-label="Luv Letter 音乐播放器">
+            <button class="play-button" id="play-button" type="button" aria-label="播放 Luv Letter">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+            <div class="music-info">
+              <div class="music-heading">
+                <strong>Luv Letter</strong>
+                <span id="time-label">0:00 / 0:00</span>
+              </div>
+              <input id="progress" class="progress" type="range" min="0" max="100" value="0" aria-label="歌曲进度">
+              <p id="music-hint">TSUKINOSORA · 本地音乐</p>
+            </div>
+            <audio id="audio" preload="none" data-src="assets/luv-letter.mp3"></audio>
+          </section>
+
+          <article class="intro-text">
+            <p>欢迎来到我的个人主页，我叫Yaru~</p>
+            <p>此主页可能只是一次兴趣的尝试，我发现设计<br>界面就让我筋疲力尽，我希望这一切能看起来<br>美观且有创意</p>
+            <p>我是一名计算机科学专业的学生，会在小红书上<br>发布一些学习日常，希望能激励到默默努力的<br>你，一起变得更好叭!</p>
+            <p>未来或许会更新日志或者小游戏等有趣的东西，<br>但会比较慢，更多时间这或许是我一个人的世<br>界，不会有太多人访问QAQ</p>
+          </article>
+        </section>
+
+        <aside class="right-rail">
+          <section class="notice-board" aria-labelledby="notice-title">
+            <header>
+              <h2 id="notice-title">notice board</h2>
+              <img src="assets/oceanfront.png" alt="oceanfront" loading="lazy" decoding="async">
+            </header>
+            <div class="notice-content">2026/8/12 第一个网页成立</div>
+          </section>
+
+          <section class="calendar-card" aria-label="北京时间和日历">
+            <div class="beijing-time">
+              <span class="time-zone">北京时间</span>
+              <strong id="beijing-clock">--:--</strong>
+              <span id="beijing-date">----年--月--日</span>
+            </div>
+            <div class="calendar-heading">
+              <strong id="calendar-month">----年 --月</strong>
+              <span>today</span>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+            </div>
+            <div class="calendar-grid" id="calendar-grid" aria-label="本月日历"></div>
+          </section>
+        </aside>
+      </div>
+
+      <div class="site-badges" aria-label="友情链接贴图">
+        <img src="assets/miet.gif" alt="miet" loading="lazy" decoding="async">
+        <img src="assets/puddingcat.gif" alt="pudding cat" loading="lazy" decoding="async">
+        <img src="assets/milkshake.png" alt="strawberry milkshake" loading="lazy" decoding="async">
+      </div>
+    </main>
+
+    <div class="dialog-backdrop" id="construction-dialog" hidden>
+      <section class="retro-window" role="dialog" aria-modal="true" aria-labelledby="construction-message">
+        <header class="retro-titlebar">
+          <span>my personal room</span>
+          <button id="close-construction" type="button" aria-label="关闭弹窗">×</button>
+        </header>
+        <div class="retro-body">
+          <p id="construction-message">剩下的区域以后再来探索吧~</p>
+          <button class="retro-ok" id="confirm-construction" type="button">知道啦</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+      <svg viewBox="0 0 44 48" role="presentation">
+        <defs>
+          <linearGradient id="cursor-berry" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff9eb3" />
+            <stop offset="1" stop-color="#e85f7e" />
+          </linearGradient>
+        </defs>
+        <path class="cursor-wing" d="M12 19C5 14 2 17 4 22c2 4 7 5 11 5" />
+        <path class="cursor-wing" d="M32 19c7-5 10-2 8 3-2 4-7 5-11 5" />
+        <path class="cursor-leaf" d="M17 13c-3-6 1-9 5-4 4-5 8-2 5 4-3 2-7 2-10 0Z" />
+        <path class="cursor-berry" d="M22 42S8 31 8 20c0-6 4-9 9-9 3 0 5 2 5 4 1-2 3-4 6-4 5 0 8 4 8 9 0 11-14 22-14 22Z" />
+        <circle cx="16" cy="25" r="1.25" />
+        <circle cx="27.5" cy="24" r="1.25" />
+        <circle cx="21.5" cy="32" r="1.25" />
+        <path class="cursor-shine" d="M13 16v6M10 19h6" />
+      </svg>
+    </div>
+
+    <script src="home.js"></script>
+  </body>
+</html>

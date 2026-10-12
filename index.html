@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7d83a8">
+    <title>my personal room</title>
+    <link rel="icon" type="image/png" href="assets/pudding-favicon-large.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="entrance" aria-label="个人小屋入口">
+      <div class="side-lace side-lace--left" aria-hidden="true">
+        <img class="side-lace__image" src="assets/white-lace-border-cropped.png" alt="">
+      </div>
+      <div class="side-lace side-lace--right" aria-hidden="true">
+        <img class="side-lace__image" src="assets/white-lace-border-cropped.png" alt="">
+      </div>
+
+      <div class="sparkle-layer" aria-hidden="true">
+        <span class="sparkle sparkle--cup-rim"></span>
+        <span class="sparkle sparkle--cup-face"></span>
+        <span class="sparkle sparkle--strawberry"></span>
+        <span class="sparkle sparkle--cream-left"></span>
+        <span class="sparkle sparkle--cream-low"></span>
+        <span class="sparkle sparkle--plate"></span>
+        <span class="sparkle sparkle--fork"></span>
+        <span class="sparkle sparkle--cloth-top"></span>
+        <span class="sparkle sparkle--cream-top"></span>
+        <span class="sparkle sparkle--cloth-right"></span>
+        <span class="sparkle sparkle--cup-base"></span>
+        <span class="sparkle sparkle--cake-left"></span>
+        <span class="sparkle sparkle--flowers-right"></span>
+        <span class="sparkle sparkle--plate-low"></span>
+      </div>
+
+      <section class="window welcome-window" aria-labelledby="welcome-title">
+        <header class="title-bar">
+          <span id="welcome-title">my personal room</span>
+          <button
+            class="window-close"
+            id="open-exit-dialog"
+            type="button"
+            aria-label="离开网站"
+            title="离开"
+          >×</button>
+        </header>
+
+        <div class="window-body welcome-body">
+          <h1>欢迎来到我的小屋<span class="face" aria-label="开心">\(^v^)/</span></h1>
+          <p>如果累了就进来喝杯奶茶叭<span class="bubble-tea" aria-label="奶茶">🧋</span>~</p>
+          <a class="pixel-button enter-button" href="home.html">进入</a>
+        </div>
+      </section>
+
+      <div class="dialog-backdrop" id="exit-dialog" hidden>
+        <section
+          class="window confirm-window"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="exit-question"
+          aria-describedby="exit-hint"
+        >
+          <header class="title-bar compact-title-bar">
+            <span>my personal room</span>
+          </header>
+
+          <div class="window-body confirm-body">
+            <p id="exit-question">确定要走嘛<span class="kaomoji" aria-label="难过">(｡•́︿•̀｡)</span></p>
+            <p class="sr-only" id="exit-hint">选择 Yes 离开网页，选择 No 返回入口。</p>
+            <div class="confirm-actions">
+              <button class="pixel-button" id="confirm-exit" type="button">Yes</button>
+              <button class="pixel-button" id="cancel-exit" type="button">No</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+      <svg viewBox="0 0 44 48" role="presentation">
+        <defs>
+          <linearGradient id="cursor-berry" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff9eb3" />
+            <stop offset="1" stop-color="#e85f7e" />
+          </linearGradient>
+        </defs>
+        <path class="cursor-wing" d="M12 19C5 14 2 17 4 22c2 4 7 5 11 5" />
+        <path class="cursor-wing" d="M32 19c7-5 10-2 8 3-2 4-7 5-11 5" />
+        <path class="cursor-leaf" d="M17 13c-3-6 1-9 5-4 4-5 8-2 5 4-3 2-7 2-10 0Z" />
+        <path class="cursor-berry" d="M22 42S8 31 8 20c0-6 4-9 9-9 3 0 5 2 5 4 1-2 3-4 6-4 5 0 8 4 8 9 0 11-14 22-14 22Z" />
+        <circle cx="16" cy="25" r="1.25" />
+        <circle cx="27.5" cy="24" r="1.25" />
+        <circle cx="21.5" cy="32" r="1.25" />
+        <path class="cursor-shine" d="M13 16v6M10 19h6" />
+      </svg>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
